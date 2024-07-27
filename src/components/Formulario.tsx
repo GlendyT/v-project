@@ -18,29 +18,27 @@ export default function Formulario() {
   };
   return (
     <div className="md:w-1/2 lg:w-2/5 mx-5">
-      <h2 className="font-black text-3xl text-center">VANTE PASSPORTS</h2>
-
       <p className="text-lg mt-5 text-center mb-10">
         Generate Your {""}
         <span className="text-black font-bold">PASSPORT</span>
       </p>
 
       <form
-        className="bg-white shadow-md rounded-lg py-10 px-5 mb-10"
+        className=""
         noValidate
         onSubmit={handleSubmit(registerCitizen)}
       >
-        <div className="mb-5">
-          <label htmlFor="name" className="text-sm uppercase font-bold">
-            CITIZEN
+        <div className=" bg-white shadow-md rounded-lg py-10 px-5 mb-10">
+          <label htmlFor="name" className="text-sm uppercase font-bold flex justify-center">
+            PASSPORT
           </label>
           <input
             id="name"
             className="w-full p-3  border border-gray-100"
             type="text"
-            placeholder="CITIZEN NAME"
+            placeholder="YOUR NAME"
             {...register("name", {
-              required: "Name of the Citizen is Required",
+              required: "Your Name Is Required",
             })}
           />
           {errors.name && <Error>{errors.name?.message}</Error>}
