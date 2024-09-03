@@ -1,79 +1,63 @@
-import { useCitizenStore } from "../../store";
 import { Citizen } from "../../types";
+import { citiesVisited } from "../../data/Cities";
 import CitizenDetailItem from "./CitizenDetailItem";
 import CitizenPage1 from "./CitizenPage1";
-import vid from "../../assets/VID.webp";
-
+import rightSite from "../../assets/Passport Image Generated Right Side.webp";
 
 type CitizenDetalProps = {
   citizen: Citizen;
 };
 
 export default function CitizenDetail({ citizen }: CitizenDetalProps) {
-  const deleteCitizen = useCitizenStore((state) => state.deleteCitizen);
-
-  const date: Date = new Date();
+  const randomIndex = Math.floor(Math.random() * citiesVisited.length);
+  const randomCity = citiesVisited[randomIndex];
 
   return (
-    <> 
-    <CitizenPage1/>
-      <div className=" py-6 bg-white shadow-md rounded-xl w-full ">
-        <p className="uppercase font-extrabold text-xs flex text-center justify-center">
-          Republica de army/ republic of army
-        </p>
-        <div className="flex flex-row-2 gap-4 my-6 mx-10 max-sm:flex-row-2 max-sm:gap-0 max-sm:my-2 max-sm:mx-2">
-          <div className="flex items-center justify-center">
-            <img src={vid} alt="" className="lg:w-44 md:w-44 sm:w-44" />
-          </div>
-          <div className="flex flex-row-2 gap-2">
-            <div className="grid gap-2">
-              <CitizenDetailItem label="Apellidos/Surname" data={"BORAHAE"} />
-              <CitizenDetailItem
-                label="Nombre/GivenNames"
-                data={citizen.name}
-              />
-              <CitizenDetailItem
-                label="Nacionalidad/Nacionality"
-                data={"ARMY"}
-              />
-              <CitizenDetailItem
-                label="FechadeNacimiento/DateOfBirth"
-                data={"13/06/2013"}
-              />
-              <CitizenDetailItem
-                label="LugarDeNacimiento/PlaceOfBirth"
-                data={"KOREA"}
-              />
+    <>
+      <CitizenPage1 randomCity={randomCity} />
+      <div className="  shadow-md rounded-xl w-full h-50 ">
+        <div className="relative w-full h-full ">
+          <div className="absolute flex flex-col justify-center w-full h-full inset-0 pr-8 pb-24 max-sm:pb-24 max-sm:pr-4 ">
+            <img
+              src={rightSite}
+              alt=""
+              className=" absolute inset-0 object-cover  w-full h-full"
+            />
+            <div className=" absolute inset-0 ">
+              <img src={randomCity.stamp} className="-rotate-90 relative pt-24 px-14 m-10 max-sm:pt-0 max-sm:m-0 max-sm:px-0 max-sm:w-14" />
             </div>
-            <div className=" space-y-2 ">
-              <CitizenDetailItem
-                label="No.DePasaporte/PassportNumber"
-                data={"THV31121995"}
-              />
-              <CitizenDetailItem
-                label="FechaDeEmisión/DateofIssue"
-                data={date.toLocaleString()}
-              />
-              <CitizenDetailItem
-                label="TipoVisa/VisaType"
-                data={"PERMANENTE"}
-              />
+            <div className=" -rotate-90">
+              <p className="flex justify-start items-center font-michroma font-semibold pb-6 text-xs uppercase max-sm:text-[9px]">
+                Republic of ARMY
+              </p>
+              <div className="flex flex-row-3 gap-3">
+                <div className="grid gap-2">
+                  <CitizenDetailItem
+                    label="Apellidos/Surname"
+                    data={"BORAHAE"}
+                  />
+                  <CitizenDetailItem label="Names" data={citizen.name} />
+                  <CitizenDetailItem label="Nacionality" data={"ARMY"} />
+                </div>
+                <div className="grid gap-2">
+                  <CitizenDetailItem label="DateOfBirth" data={"13/06/2013"} />
+                  <CitizenDetailItem label="PlaceOfBirth" data={"KOREA"} />
+                  <CitizenDetailItem
+                    label="PassportNumber"
+                    data={"THV-31-12-1995"}
+                  />
+                  <CitizenDetailItem label="VisaType" data={"PERMANENT"} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <p className="text-xs uppercase text-center justify-center">
-          {citizen.id}
-        </p>
-      </div>
-      <div className="flex justify-center mt-10">
-        <button
-          type="button"
-          className="py-2 px-10 bg-black hover:bg-slate-600 text-white font-bold uppercase rounded-lg"
-          onClick={() => deleteCitizen(citizen.id)}
-        >
-          Restart
-        </button>
       </div>
     </>
   );
 }
+
+/*              <CitizenDetailItem
+                label="FechaDeEmisión/DateofIssue"
+                data={date.toLocaleString()}
+              />*/

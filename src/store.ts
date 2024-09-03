@@ -15,21 +15,26 @@ const createCitizen = (citizen: DraftCitizen): Citizen => {
 
 export const useCitizenStore = create<CitizenState>()(
   devtools(
-    persist((set) => ({
-    citizens: [],
-    addCitizen: (data) => {
-      const newCitizen = createCitizen(data);
-      set((state) => ({
-        citizens: [...state.citizens, newCitizen],
-      }));
-    },
-    deleteCitizen: (id) => {
-      set((state) => ({
-        citizens: state.citizens.filter((citizen) => citizen.id !== id),
-      }));
-    },
-  }),{
-    name: "citizen-store",
-  })
-)
+    persist(
+      (set) => ({
+        citizens: [],
+        addCitizen: (data) => {
+          const newCitizen = createCitizen(data);
+          set((state) => ({
+            citizens: [...state.citizens, newCitizen],
+          }));
+        },
+        deleteCitizen: (id) => {
+          set((state) => ({
+            citizens: state.citizens.filter((citizen) => citizen.id !== id),
+          }));
+        },
+
+      }),
+      {
+        name: "citizen-store",
+      }
+    )
+  )
 );
+
