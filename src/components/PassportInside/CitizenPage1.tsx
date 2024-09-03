@@ -1,14 +1,11 @@
-import { Cities } from "../../types";
-
 type CitizenDetalProps = {
-  randomCity: Cities
+  image: string;
 };
 
-
-export default function CitizenPage1({ randomCity }:CitizenDetalProps) {
+export default function CitizenPage1({ image }: CitizenDetalProps) {
   return (
     <div className=" shadow-md rounded-xl w-full h-50 ">
-      <img src={randomCity.image} />
+      <img src={image} />
     </div>
   );
 }
