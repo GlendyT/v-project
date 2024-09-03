@@ -17,8 +17,8 @@ export default {
       colors: {
         purpleButton: "rgb(93,40,95)",
         blueButton: "rgb(04,84,139)",
-        greenButton: "rgb(32,95,30)"
-      }
+        greenButton: "rgb(32,95,30)",
+      },
     },
   },
   plugins: [],
