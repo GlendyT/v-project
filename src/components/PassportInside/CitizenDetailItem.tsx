@@ -9,10 +9,10 @@ export default function CitizenDetailItem({
 }: CitizenDetailItemProps) {
   return (
     <>
-    <p className="font-bold text-gray-700 text-xs flex flex-col">
-      {label}
-      <span className="font-normal text-sm uppercase">{data}</span>
-    </p>
+      <p className=" font-michroma font-extrabold text-violet-950 text-[6px] flex flex-col max-sm:text-[6px]">
+        {label}
+        <span className="font-normal text-[9px] max-sm:text-[7px] uppercase">{data}</span>
+      </p>
     </>
   );
 }
