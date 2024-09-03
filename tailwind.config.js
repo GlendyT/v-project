@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        largeScreen: "url('./src/assets/Background Page Starts.webp')",
+        largeScreen: "url('./src/assets/Background Page Starts.jpg')",
         largeScreen2: "url('./src/assets/Background Page Generated.webp')",
         rightSidePassport:
           "url('./src/assets/Passport Image Generated Right Side.webp')",
