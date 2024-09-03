@@ -1,11 +1,13 @@
 import { Cities } from "../types";
+import arizonaImage from  "../assets/Passport Image Generated Arizona US Left Side.webp"
+import arizonaStamp from  "../assets/US Arizona Stamp.webp"
 
 export const citiesVisited: Cities[] = [
   {
     id: 1,
     name: "Arizona",
-    image: "/src/assets/Passport Image Generated Arizona US Left Side.webp",
-    stamp: "/src/assets/US Arizona Stamp.webp",
+    image: arizonaImage,
+    stamp: arizonaStamp,
   },
   {
     id: 2,
