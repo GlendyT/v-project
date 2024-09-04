@@ -1,6 +1,22 @@
 import { Cities } from "../types";
-import arizonaImage from  "../assets/Passport Image Generated Arizona US Left Side.webp"
-import arizonaStamp from  "../assets/US Arizona Stamp.webp"
+//TODO IMAGENES
+import arizonaImage from "../assets/Passport Image Generated Arizona US Left Side.webp";
+import koreaImage from "../assets/Passport Image Generated Jeju Island Korea Left Side.webp";
+import europeImage from "../assets/Passport Image Generated Malta Europe Left Side.webp";
+import newzelandImage from "../assets/Passport Image Generated New Zeland Left Side.webp";
+import parisImage from "../assets/Passport Image Generated Paris France Left Side.webp";
+import mexicoImage from "../assets/Passport Image Generated Teotihuacan Mexico Left Side.webp";
+import unitedstatesImage from "../assets/Passport Image Generated US Hawaii Left Side.webp";
+import italyImage from "../assets/Passport Image Generated Venice Italy Left Side.webp";
+//TODO STAMPS
+import arizonaStamp from "../assets/US Arizona Stamp.webp";
+import koreaStamp from "../assets/South Korea Stamp.webp";
+import europeStamp from "../assets/Europe Malta Stamp.webp";
+import newzelandStamp from "../assets/New Zeland Stamp.webp";
+import parisStamp from "../assets/France Paris Stamp.webp";
+import mexicoStamp from "../assets/Mexico Teotihuacan Stamp.webp";
+import unitedstatesStamp from "../assets/US Hawaii Stamp.webp";
+import italyStamp from "../assets/Italy Stamp.webp";
 
 export const citiesVisited: Cities[] = [
   {
@@ -12,45 +28,43 @@ export const citiesVisited: Cities[] = [
   {
     id: 2,
     name: "Korea",
-    image:
-      "/src/assets/Passport Image Generated Jeju Island Korea Left Side.webp",
-    stamp: "/src/assets/South Korea Stamp.webp",
+    image: koreaImage,
+    stamp: koreaStamp,
   },
   {
     id: 3,
     name: "Europe",
-    image: "/src/assets/Passport Image Generated Malta Europe Left Side.webp",
-    stamp: "/src/assets/Europe Malta Stamp.webp",
+    image: europeImage,
+    stamp: europeStamp,
   },
   {
     id: 4,
     name: "New Zeland",
-    image: "/src/assets/Passport Image Generated New Zeland Left Side.webp",
-    stamp: "/src/assets/New Zeland Stamp.webp",
+    image: newzelandImage,
+    stamp: newzelandStamp,
   },
   {
-    id: 4,
+    id: 5,
     name: "Paris",
-    image: "/src/assets/Passport Image Generated Paris France Left Side.webp",
-    stamp: "/src/assets/France Paris Stamp.webp",
+    image: parisImage,
+    stamp: parisStamp,
   },
   {
-    id: 4,
+    id: 6,
     name: "Mexico",
-    image:
-      "/src/assets/Passport Image Generated Teotihuacan Mexico Left Side.webp",
-    stamp: "/src/assets/Mexico Teotihuacan Stamp.webp",
+    image: mexicoImage,
+    stamp: mexicoStamp,
   },
   {
-    id: 4,
+    id: 7,
     name: "United States",
-    image: "/src/assets/Passport Image Generated US Hawaii Left Side.webp",
-    stamp: "/src/assets/US Hawaii Stamp.webp",
+    image: unitedstatesImage,
+    stamp: unitedstatesStamp,
   },
   {
-    id: 4,
+    id: 8,
     name: "Italy",
-    image: "/src/assets/Passport Image Generated Venice Italy Left Side.webp",
-    stamp: "/src/assets/Italy Stamp.webp",
+    image: italyImage,
+    stamp: italyStamp,
   },
 ];
